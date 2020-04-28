@@ -1,3 +1,5 @@
+Новиков Андрей Сергеевич (27.04.2020-05.06.2020)
+
 # Учебный шаблон проекта Portfolio
 
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же 
@@ -8,7 +10,7 @@
 $ git clone git@github.com:loftschool/ls-advanced-portfolio.git
 $ cd ls-advanced-portfolio
 $ yarn
-```
+
 
 ## Скрипты package.json:
 
