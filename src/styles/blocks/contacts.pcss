@@ -1,0 +1,51 @@
+.contacts {
+    background: url('~images/content/contacts_bg.jpg');
+    padding-top: 253px;
+    padding-bottom: 135px;
+    background-position: 100%;
+    background-size: cover;
+
+    @include phones {
+      padding-top: 170px;
+      padding-bottom: 110px;
+    }
+  }
+  
+  .contacts__form-title {
+    @include phones {
+      text-align: center;
+    }
+  }
+  
+  .contacts__about {
+    margin-bottom: 190px;
+    @include phones {
+      margin-bottom: 150px;
+    }
+  }
+  
+  .contacts__container {
+    position: relative;
+    padding-right: 26%;
+    @include tablets {
+      padding-right: 0;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        background: url('~images/content/foliage.png') right bottom / contain no-repeat;
+        display: block;
+        height: 100%;
+        width: 100%;
+        right: -3%;
+        top: -38%;  
+    }   
+}
+  
+  .contacts__form {
+    width: 89%;
+    @include tablets {
+      width: 100%;
+    }
+  }

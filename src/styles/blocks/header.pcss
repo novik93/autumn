@@ -1,0 +1,23 @@
+.header {
+    margin: 60px 0 0;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.header__menu {
+    display: flex;
+    justify-content:center;
+    flex: 1;
+    margin: 0 20px;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.header__buttons {
+    @include phones {
+      display: none;
+    }
+}

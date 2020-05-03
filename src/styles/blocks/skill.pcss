@@ -1,0 +1,39 @@
+.skill {
+    position: relative;
+    width: 166px;
+    height: 166px;
+  
+    @include tablets {
+      width: 135px;
+      height: 135px;
+    }
+  }
+  
+  .skill__circle {
+    fill: transparent;
+    &--under {
+        stroke: #eaeaea;
+        stroke-width: 5px;
+    }
+    &--above {
+        stroke: #d98b20;
+        stroke-width: 10px;
+        stroke-dasharray: 251;
+        stroke-dashoffset: 100;
+    }
+}
+  
+.skill__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 18px;
+    color: rgba($text-color, .5);
+    padding: 14px;
+
+    @include phones {
+        font-size: 16px;
+    }
+}

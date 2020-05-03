@@ -1,0 +1,36 @@
+.slider {
+    position: relative;
+}
+
+.slider__preview-pic {
+    height: 30%;
+    position: absolute;
+    left: 0.3%;
+    bottom: 15%;
+}
+
+.slider-buttons__item {
+    cursor: pointer;
+    font-weight: 900;;
+    color: #727883;
+    position: absolute;
+    right: 0;
+    width: 65px;
+    height: 65px;
+    background-color: #353e4e;
+
+    &--slide--prev {
+        right: -65px;
+        bottom: 50px;
+    }
+
+    &--slide--next {
+        bottom: 115px;
+        right: -65px;
+    }
+
+    &.active {
+        color: #fff;
+    }
+}
+
