@@ -1,5 +1,6 @@
 .slider {
     position: relative;
+
 }
 
 .slider__preview-pic {
@@ -7,6 +8,19 @@
     position: absolute;
     left: 0.3%;
     bottom: 15%;
+
+    @include phones {
+        display: none;
+    }
+}
+
+.slider__buttons {
+
+    @include phones {
+        position: absolute;
+        bottom: -25%;
+        right: 19%;
+    }
 }
 
 .slider-buttons__item {

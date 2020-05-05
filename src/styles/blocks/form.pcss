@@ -7,6 +7,10 @@
         margin-bottom: 0;
     }
 
+    @include tablets {
+        text-align: center;
+    }
+
     &--extra-margin {
         margin-bottom: 60px;
     @include phones {
@@ -17,6 +21,12 @@
     
     &:last-child {
         margin-bottom: 0;
+    }
+
+    &-btn {
+        @include tablets {
+           text-align: center;
+          }
     }
 }
 

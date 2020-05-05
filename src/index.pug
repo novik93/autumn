@@ -30,6 +30,8 @@ html(lang="en")
                       li.socials__item
                         a(href="").socials__link 
                           +icon(`${item}`, 'socials__icon')
+                .header__burgerMenu
+                  .burgerMenu
               .hero__content
                 .userinfo
                   .userinfo__title Личный сайт веб разработчика
@@ -179,7 +181,7 @@ html(lang="en")
                             textarea(
                               placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса"
                             ).form-block__input
-                    .from__row
+                    .form__row-btn
                       input(type="submit" value="отправить").gradient-btn.form__submit
 
       footer.footer

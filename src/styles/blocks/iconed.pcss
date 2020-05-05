@@ -1,6 +1,14 @@
 .iconed-link {
     display: flex;
     margin-top: 45px;
+
+    @include tablets {
+        justify-content: center;
+    }
+
+    @include phones {
+        justify-content: initial;;
+      }
 }
 
 .iconed-link-icon {

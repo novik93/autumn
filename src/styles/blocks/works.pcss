@@ -11,6 +11,11 @@
     @include phones {
         padding-bottom: 0px;
     }
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .works__container {
@@ -28,10 +33,23 @@
         text-align: center;
         margin-bottom: 30px;
     }
+
+    @include tablets {
+        padding: 0;
+    }
 }
 
 .works__left {
     width: 60%;
+
+    @include tablets {
+        width: 86%;
+        margin-right: auto;
+    }
+
+    @include phones {
+        width: 100%;
+    }
 }
 
 .works__right {
@@ -47,11 +65,35 @@
         opacity: 0.1;
         font-size: 400px;
         font-weight: 900;
+        
+        @include tablets {
+            content: "2";
+            position: absolute;
+            top: -168%;
+            opacity: .1;
+            left: 90%;
+            font-size: 276px;
+            font-weight: 900;
+        }
     }
+
+    @include tablets {
+        width: 80%;
+        text-align: center;
+        margin: 60px 0 0 0;
+    }
+
+    @include phones {
+        text-align: initial;
+      }
 }
 
 .works__tags {
     display: flex;
+
+    @include tablets {
+        justify-content: center;
+    }
 }
 
 .works__text {

@@ -11,11 +11,17 @@
     }
 
     &-pic {
+        // width: 100%;
         padding-right: 30px;
+
+        @include phones {
+            padding-right: 15px;
+        }
     }
 
     &-title {
         white-space: nowrap;
         font-weight: 700;
     }
+
 }

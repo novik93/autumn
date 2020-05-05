@@ -7,34 +7,38 @@
     margin-bottom: 114px;
   
     @include phones {
+      height: 100%;
       margin-bottom: 75px;
     }
   }
   
   .values__container {
     position: relative;
+    
     @include tablets {
-      padding-bottom: 350px;
+      // padding-bottom: 350px;
     }
     &:before {
       content: "";
       position: absolute;
       background: url('~images/content/arm.png') left bottom / contain no-repeat;
       display: block;
-      bottom: -36%;
+      bottom: -23%;
       height: 79%;
       width: 69%;
       left: -3%;
+
       @include tablets {
         bottom: 0;
-        left: 50%;
-        height: 300px;
-        transform: translateX(-50%);
-        background-position: center center;
+        left: 14%;
+        top: 69.3%;
+        height: 28.75rem;
+        transform: rotate(-90deg);
       }
   
       @include phones {
-        width: 100%;
+        left: -8%;
+        width: 78%;
       }
     }
   }
@@ -83,13 +87,15 @@
   .values__widget {
     display: flex;
     justify-content: flex-end;
+    
     @include tablets {
+      text-align: center;
       justify-content: center;
     }
   }
   
   .values__widget-container {
-    width: 66%;
+    width: 68%;
     @include tablets {
       width: 95%;
     }
