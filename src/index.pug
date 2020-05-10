@@ -15,17 +15,17 @@ html(lang="en")
           section.parallax
             .parallax__layer(data-speed="0.15")
               +image("parallax/6.png", "parallax__image")
-            .parallax__layer(data-speed="0.20")
+            .parallax__layer(data-speed="0.25")
               +image("parallax/5.png", "parallax__image")
-            .parallax__layer(data-speed="0.27")
-             +image("parallax/4.png", "parallax__image")
-            .parallax__layer(data-speed="0.33")
-              +image("parallax/3.png", "parallax__image")
             .parallax__layer(data-speed="0.35")
-              +image("parallax/2.png", "parallax__image")
-            .parallax__layer(data-speed="0.37")
-              +image("parallax/1.png", "parallax__image")
+             +image("parallax/4.png", "parallax__image")
             .parallax__layer(data-speed="0.40")
+              +image("parallax/3.png", "parallax__image")
+            .parallax__layer(data-speed="0.45")
+              +image("parallax/2.png", "parallax__image")
+            .parallax__layer(data-speed="0.50")
+              +image("parallax/1.png", "parallax__image")
+            .parallax__layer(data-speed="0.55")
               +image("parallax/7.png", "parallax__image")
           section.hero
             .container.hero__container
@@ -108,26 +108,12 @@ html(lang="en")
                     .reviews__title.section-title Что обо мне говорят ?
                     .reviews__buttons 
                       .reviews__btn
-                        .reviews__btn_prev
-                        .reviews__btn_next
+                        .reviews__btn_prev(@click.prevent="slidePrev")
+                        .reviews__btn_next(@click.prevent="slideNext")
                   .reviews__content
-                    ul.reviews__content-item
-                        li.reviews__content-item-text
-                          p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                          a(href="#").reviews__social.teacher-social
-                            .teacher-social-pic
-                              +image("content/Kovalchuk.png", "teacher-social-icon")
-                            .teacher-social-content
-                              h4.teacher-social-title Ковальчук Дмитрий
-                              p Основатель Loftschool
-                        li.reviews__content-item-text
-                          p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах. 
-                          a(href="#").reviews__social.teacher-social
-                            .teacher-social-pic
-                              +image("content/Sibancev.png", "teacher-social-icon")
-                            .teacher-social-content
-                              h4.teacher-social-title Владимир Сабанцев
-                              p Преподаватель
+                      ul.reviews__content-item
+                        #hooper
+                          
                 .form
                   .section-title.contacts__form-title Связаться со мной
                   form.form__elem

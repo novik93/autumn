@@ -4,6 +4,12 @@
   }
 }
 
+@mixin desktop-hr() {
+  @media screen and (min-width: 1500px) {
+    @content;
+  }
+}
+
 @mixin desktop() {
   @media screen and (max-width: $bp-desktop) {
     @content;

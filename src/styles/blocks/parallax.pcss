@@ -1,12 +1,16 @@
 .parallax {
     overflow: hidden;
     // height: 100vh;
-    height: 1600px;
+    height: 1760px;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+
+    @include desktop {
+        display: none;
+    }
   
 }
   
@@ -27,42 +31,47 @@
     &:nth-child(2) {
         .parallax__image {
         left: 0;
-        top: 260px;
+        top: 280px;
         }
     }
 
     &:nth-child(3) {
         .parallax__image {
         left: 0;
-        top: 360px;
+        top: 379px;
         }
     }
 
     &:nth-child(4) {
         .parallax__image {
-        bottom: 280px;
+        bottom: 523px;
         right: 0;
-        }
+
+            @include desktop-hr {
+                bottom: 291px;;
+            }
+        } 
     }
 
     &:nth-child(5) {
         .parallax__image {
-        bottom: 250px;
+        bottom: 415px;
         right: 0;
         }
     }
 
     &:nth-child(6) {
         .parallax__image {
-        bottom: 200px;
+        bottom: 383px;
         right: 0;
         }
     }
 
     &:nth-child(7) {
         .parallax__image {
-        bottom: -400px;
+        bottom: -600px;
         right: 0;
+        height: 60%;
         }
     }
 }
