@@ -1,16 +1,16 @@
 script(type="text/x-template")#slider-hooper
-
     hooper(:itemsToShow="2" :itemsToSlide="2" @slide="handleSlide" )
         hooper-navigation(slot="hooper-addons")
         slide(v-for="review in reviews" :key="review.id" @slide="$emit('slide', $event)")
             slideReviews(:currentReviews="currentReviews" :reviews="reviews" @slide="$emit('slide', $event)")
-            p {{currentReviews.text}}
-            a(href="#").reviews__social.teacher-social
-                .teacher-social-pic
-                img(:src="currentReviews.pic").teacher-social-icon
-                .teacher-social-content
-                h4.teacher-social-title {{currentReviews.name}}
-                p {{currentReviews.occ}}
+            li.reviews__content-item-text
+                p {{currentReviews.text}}
+                a(href="#").reviews__social.teacher-social
+                    .teacher-social-pic
+                    img(:src="currentReviews.pic").teacher-social-icon
+                    .teacher-social-content
+                        h4.teacher-social-title {{currentReviews.name}}
+                        p {{currentReviews.occ}}
         //- slide 2
         //-     li.reviews__content-item-text
         //-         p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах. 

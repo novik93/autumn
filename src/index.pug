@@ -51,8 +51,8 @@ html(lang="en")
               .hero__content
                 .userinfo
                   .userinfo__title Личный сайт веб разработчика
-                  .userinfo__name Андрей Новиков
-              .hero__downbutton
+                  h1.userinfo__name Андрей Новиков
+              a.hero__downbutton
                 .scroll-down__btn
           
           section.about 
@@ -107,9 +107,9 @@ html(lang="en")
                   .reviews__header
                     .reviews__title.section-title Что обо мне говорят ?
                     .reviews__buttons
-                      .reviews__btn
-                        .reviews__btn_prev(@click.prevent="$emit('slide','prev')")
-                        .reviews__btn_next(@click.prevent="$emit('slide','next')")
+                      //- .reviews__btn
+                      //-   .reviews__btn_prev(@click.prevent="$emit('slide','prev')")
+                      //-   .reviews__btn_next(@click.prevent="$emit('slide','next')")
                   .reviews__content
                       ul.reviews__content-item
                         #hooper

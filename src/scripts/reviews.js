@@ -52,6 +52,15 @@ new Vue({
         },
         handleClick(direction) {
             this.$emit("slide", direction);
+        },
+        slidePrev() {
+            this.$refs.carousel.slidePrev();
+        },
+          slideNext() {
+            this.$refs.carousel.slideNext();
+        },
+          updateCarousel(payload) {
+            this.myCarouselData = payload.currentSlide;
         }
     },
     created() {
@@ -60,11 +69,3 @@ new Vue({
         this.reviews = data;
     },
 });
-
-
-new Vue({
-    el: 'reviews__btn',
-    data: {
-        counter: 0
-    }
-  })
