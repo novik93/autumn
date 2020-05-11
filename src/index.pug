@@ -106,10 +106,10 @@ html(lang="en")
                 .reviews
                   .reviews__header
                     .reviews__title.section-title Что обо мне говорят ?
-                    .reviews__buttons 
+                    .reviews__buttons
                       .reviews__btn
-                        .reviews__btn_prev(@click.prevent="slidePrev")
-                        .reviews__btn_next(@click.prevent="slideNext")
+                        .reviews__btn_prev(@click.prevent="$emit('slide','prev')")
+                        .reviews__btn_next(@click.prevent="$emit('slide','next')")
                   .reviews__content
                       ul.reviews__content-item
                         #hooper
