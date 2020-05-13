@@ -37,8 +37,9 @@
       }
     }
     @include phones {
-      width: 100%;
-      margin-bottom: 60px;
+      width: 95%;
+      margin: 0 auto;
+      margin-bottom: 30px;
       &:before {
         display: none;
       }
@@ -112,7 +113,7 @@
   
     @include phones {
       top: initial;
-      right: -21px;
+      right: -22px;
       bottom: 22px;
     }
   }
@@ -209,6 +210,11 @@
     font-size: 30px;
     margin-bottom: 42px;
     font-weight: bold;
+
+    @include phones {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
   }
   
   .works-slider__desc {
@@ -217,10 +223,13 @@
     font-size: 16px;
     color: #ccc;
     line-height: 1.8;
-  }
-  
-  .works-slider__desc {
     margin-bottom: 38px;
+
+    @include phones {
+      font-size: 14px;
+      margin-top: 35px;
+      margin-bottom: 25px;
+    }
   }
   
   .works-slider__link {

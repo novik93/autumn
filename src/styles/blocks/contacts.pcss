@@ -4,6 +4,7 @@
     padding-bottom: 135px;
     background-position: 100%;
     background-size: cover;
+    position: relative;
 
     @include phones {
       padding-top: 170px;
@@ -29,7 +30,6 @@
   }
   
   .contacts__container {
-    position: relative;
     padding-right: 26%;
     @include tablets {
       padding-right: 0;
@@ -43,7 +43,11 @@
         height: 100%;
         width: 100%;
         right: -3%;
-        top: -38%;  
+        top: -14%;  
+
+        // @include phones {
+        //   right: -42%;
+        // }
     }   
 }
   
