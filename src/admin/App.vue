@@ -103,20 +103,35 @@
           .container.works-container
             h1.page-title Добавление работы    
             .works-content
-              .works-left
+              form.works-left
                 .works-download
                   .works-download-title
                     span  перетащите либо загрузите <br> изображение
                     button.download-btn загрузить
-              .works-right
+              form.works-right(@submit.prevent="login")
                 label.works-input(data-title="Название")
-                  input.works-input-name(placeholder="Дизайн сайта")
+                  input(
+                    v-model="work.name" 
+                    :errorText="validation.firstError('work.name')"
+                    placeholder="Дизайн сайта"
+                  ).works-input-name
+                  .input__error {{validation.firstError('work.name')}}
                 label.works-input(data-title="Ссылка")
-                  input.works-input-link(placeholder="https://wwww.сайт.ru")
+                  input(
+                    v-model="work.link" 
+                    :errorText="validation.firstError('work.link')"
+                    placeholder="https://wwww.сайт.ru"
+                  ).works-input-link
+                  .input__error {{validation.firstError('work.link')}}
                 label.works-input(data-title="Описание")
                   textarea.works-input-desc(placeholder="занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты")
                 label.works-input(data-title="Добавление тега")
-                  input.works-input-add(placeholder="HTML, Vue.js, Jquery")
+                  input(
+                    placeholder="HTML, Vue.js, Jquery"
+                    v-model="work.teg" 
+                    :errorText="validation.firstError('work.teg')"
+                  ).works-input-add
+                  .input__error {{validation.firstError('work.teg')}}
                 ul.works-input-tags
                   - var tags = ["html", "Vue.js", "Jquery"];
                   each item in tags 
@@ -126,7 +141,9 @@
 
                 .works-input-button
                   button.download-btn.download-btn-cansel отмена
-                  button.download-btn загрузить
+                  button(
+                    type="submite"
+                  ).download-btn загрузить
             .works-add 
               button.add__newWork.works-add__container
                 .add__newWork-circle
@@ -159,9 +176,9 @@
             .container.card
               .card__title
                 .card__title-text Текст
-              .card__content
+              form.card__content(@submit.prevent="login")
                 .reviews__form   
-                  .reviews__form-content
+                  form.reviews__form-content
                     .reviews__form-userpic
                       label.reviews__form-avatar-upload
                         input.reviews__form-file-input
@@ -175,17 +192,27 @@
                       .reviews__form-row
                         .reviews__form-block
                           label.works-input(data-title="Имя автора ")
-                            input.works-input-name(placeholder="Игорек")
+                            input(
+                              placeholder="Игорек"
+                              v-model="reviews.name" 
+                              :errorText="validation.firstError('reviews.name')"
+                            ).works-input-name
+                            .input__error {{validation.firstError('reviews.name')}}
                         .reviews__form-block
                           label.works-input(data-title="Титул автора")
-                            input.works-input-name(placeholder="Фартовый")
+                            input(
+                              v-model="reviews.title" 
+                              :errorText="validation.firstError('reviews.title')"
+                              placeholder="Фартовый"
+                            ).works-input-name
+                            .input__error {{validation.firstError('reviews.title')}}
                       .reviews__form-row
                         .reviews__form-block
                           label.works-input(data-title="Отзыв")
                             textarea.works-input-desc(placeholder="занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты")
                 .edit-form__buttons
                   button.download-btn.download-btn-cansel отмена
-                  button.download-btn загрузить
+                  button(type="submit").download-btn загрузить
           .reviews-add 
               button.add__newWork.works-add__container.reviews-add__container
                 .add__newWork-circle
@@ -228,7 +255,8 @@
                     input(
                       v-model="user.name" 
                       :errorText="validation.firstError('user.name')"
-                      ).login__row-input
+                      ).login__row-input 
+                  .input__error {{validation.firstError('user.name')}}
                 .login__row
                   span Пароль
                   .login__row-title
@@ -240,6 +268,7 @@
                       v-model="user.password" 
                       :errorText="validation.firstError('user.password')"
                       ).login__row-input
+                  .input__error {{validation.firstError('user.password')}}
                 .login__btn
                   button(type="submit").login__send отправить
 
@@ -266,6 +295,21 @@ export default {
     "user.password": value => {
       return Validator.value(value).required("Введите ваш пароль");
     },
+     "work.name": value => {
+      return Validator.value(value).required("Введите имя сайта");
+    },
+     "work.link": value => {
+      return Validator.value(value).required("Введите ссылку на сайт");
+    },
+     "work.teg": value => {
+      return Validator.value(value).required("Добавьте тег");
+    },
+     "reviews.name": value => {
+      return Validator.value(value).required("Введите имя автора");
+    },
+     "reviews.title": value => {
+      return Validator.value(value).required("Добавьте титул");
+    },
   },
   data() {
     return {
@@ -273,7 +317,18 @@ export default {
       user: {
         name:"",
         password:""
-      }
+      },
+      disableSubmit: false,
+      work: {
+        name:"",
+        link:"",
+        teg:""
+      },
+      disableSubmit: false,
+      reviews: {
+        name:"",
+        title:""
+      },
     };
   },
   methods: {
@@ -284,6 +339,10 @@ export default {
   },
   
 };
+
+
+
+
 </script>
 
 
@@ -292,6 +351,22 @@ export default {
 @import "../styles/mixins.pcss";
 @import "../styles/layout/base.pcss";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+
+
+
+
+
+
+.input__error {
+  z-index: 100;
+  background: transparent;
+  color: red;
+  padding: 12px 20px;
+  font-size: 14px;
+  white-space: nowrap;
+
+}
+
 
 
 input {
@@ -1291,6 +1366,7 @@ hr {
 }
 
 .login__row-input {
+  font-size: 20px;
   outline: none;
   margin-left: 20px;
   border: none;
