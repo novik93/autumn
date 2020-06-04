@@ -51,8 +51,11 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "axios": "^0.19.2",
     "hooper": "^0.3.4",
     "normalize.css": "^8.0.1",
+    "postcss-each": "^0.10.0",
+    "postcss-sass-each": "^0.1.0",
     "postcss-ts-classnames": "^0.1.2",
     "promptly": "^3.0.3",
     "pug": "^2.0.4",
@@ -62,6 +65,7 @@
     "vue": "^2.6.11",
     "vue-flickity": "^1.2.1",
     "vue-router": "^3.0.2",
-    "vuelidate": "^0.7.5"
+    "vuelidate": "^0.7.5",
+    "vuex": "^3.4.0"
   }
 }
