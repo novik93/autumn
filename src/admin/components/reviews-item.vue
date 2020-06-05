@@ -42,7 +42,7 @@ export default {
       this.$emit("updateWork");
     },
     async removeExistedReview() {
-      if (confirm('Удалить отзыв?') === false)
+      if (confirm('Удалить отзыв?') === true)
       try {
         const response = await this.removeReview(this.review.id);
         this.showTooltip({

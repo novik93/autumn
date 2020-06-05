@@ -13,7 +13,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Добавить работу"
+      default: "Добавить"
     }
   }
 };

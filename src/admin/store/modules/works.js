@@ -38,7 +38,7 @@ export default {
       async fetchWorks({ commit, rootGetters }) {
         try {
           const userId = rootGetters['user/userId'];
-          const response = await this.$axios.get(`/works/${userId}`);
+          const response = await this.$axios.get(`/works/337`);
           commit("SET_WORKS", response.data);
           return response;
         } catch (error) {

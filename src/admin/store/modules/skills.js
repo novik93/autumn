@@ -78,7 +78,7 @@ export default {
     async fetchSkills({commit, rootGetters}) {
       try {
         const userId = rootGetters['user/userId'];
-        const response = await this.$axios.get(`/skills/${userId}`);
+        const response = await this.$axios.get(`/skills/337`);
         commit("SET_SKILLS_STATE", response.data);
         return response;
       } catch (error) {

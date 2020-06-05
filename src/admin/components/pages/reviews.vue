@@ -40,7 +40,7 @@ export default {
   components: {
     addNew: () => import("../add-new"),
     addNewReview: () => import("../reviews-add"),
-    // reviewsItem: () => import("components/reviews-item.vue")
+    reviewsItem: () => import("../reviews-item")
   },
   computed: {
     ...mapState("reviews", {

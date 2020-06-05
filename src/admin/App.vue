@@ -1049,7 +1049,7 @@ textarea {
   background: #fff;
 }
 .reviews-container {
-  height: 520px;
+  /* height: 520px; */
 
   @include tablets {
     height: auto;

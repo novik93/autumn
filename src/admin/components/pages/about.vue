@@ -1,8 +1,8 @@
 <template lang="pug">
 .about-page-container
   .container
-    .about-page__title
-      h1.page-title {{pageTitle}}
+    .about-page__title 
+      h1.page-title Блок "Обо мне"
       button.about-page__add-new(
         v-if="showAddingCard === false"
         @click="showAddingCard = true"
