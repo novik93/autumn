@@ -31,20 +31,20 @@ html(lang="en")
             .container.hero__container
               header.header.hero__header
                 .header__logo
-                  a(href="").logo HA
+                  a(href="#").logo HA
                 .header__menu
                   nav.menu
                     ul.menu__list
                       - var menu = ['Главная' , 'Обо мне' , 'Навыки' , 'Работы' , 'Отзывы' , 'Связаться'];
                       each item in menu
                         li.menu__item
-                          a(href="").menu__link #{item}
+                          a(href="#").menu__link #{item}
                 .header__buttons
                   ul.socials
                     - var socials = ['insta' , 'vk' , 'github'];
                     each item in socials 
                       li.socials__item
-                        a(href="").socials__link 
+                        a(href="https://vk.com/n0v1k").socials__link 
                           +icon(`${item}`, 'socials__icon')
                 .header__burgerMenu
                   .burgerMenu
@@ -54,17 +54,17 @@ html(lang="en")
                   h1.userinfo__name 
                     span Андрей 
                     span Новиков
-              a.hero__downbutton
+              a(href="#about").hero__downbutton
                 .scroll-down__btn Скролл
           
-          section.about 
+          section.about(id = "about")
               .container
                 .about__columns
                   .about__user
                     .user
                       .user__avatar
                         .user__avatar-wrapper
-                          +image("content/user.jpg", "user__avatar-pic")
+                          +image("content/novik2.jpg", "user__avatar-pic")
                         .user__about
                           -
                             var data = [
