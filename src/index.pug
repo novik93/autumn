@@ -35,14 +35,15 @@ html(lang="en")
                 .header__menu
                   nav.menu
                     ul.menu__list
-                      - var menu = ['Главная' , 'Обо мне' , 'Навыки' , 'Работы' , 'Отзывы' , 'Связаться'];
+                      - var menu = [{link: '#skill', title: 'Главная' }, {link: '#about', title:'Обо мне'} , {link: '#skills', title:'Навыки' }, {link: '#works', title:'Работы' }, {link: '#reviews', title:'Отзывы'} , {link: '#contacts', title:'Связаться'}];
                       each item in menu
+                        - const {link, title} = item
                         li.menu__item
-                          a(href="#").menu__link #{item}
+                          a(href= link).menu__link #{title}
                 .header__buttons
                   ul.socials
                     - var socials = ['insta' , 'vk' , 'github'];
-                    each item in socials 
+                    each item in socials
                       li.socials__item
                         a(href="https://vk.com/n0v1k").socials__link 
                           +icon(`${item}`, 'socials__icon')
@@ -69,7 +70,7 @@ html(lang="en")
                           -
                             var data = [
                               ['Проживаю', 'Москва'],
-                              ['Возраст', '26'],
+                              ['Возраст', '27'],
                               ['Родился', '12.09.1993'],
                             ];
                           table.user__table
@@ -86,7 +87,7 @@ html(lang="en")
                       .about__ps
                         p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
         .middle-section
-          section.values
+          section.values(id = "skills")
             .container.values__container
               .values__wrapper
                 .values__title
@@ -97,12 +98,12 @@ html(lang="en")
                 .values__widget
                   #skills-component
                   
-          section.works
+          section.works(id = "works")
             .container.works__container
               h2.section-title.works__section-title Мои работы
               .works__content
                 #slider-component
-        section.contacts
+        section.contacts(id = "reviews")
             .container.contacts__container
               .contacts__about
                 .reviews
@@ -117,12 +118,12 @@ html(lang="en")
                         #hooper
                           
                 .form
-                  .section-title.contacts__form-title Связаться со мной
+                  .section-title.contacts__form-title(id = "contacts") Связаться со мной
                   form.form__elem
                     .form__row
                       - 
                         var fields = [
-                          ['user', 'Введите ваше имя', 'Ковальчук Дмитрий'],
+                          ['user', 'Введите ваше имя', 'Иван Иванов'],
                           ['envelope', 'Введите ваш email', 'loftschool@study.com'],
                         ]
                       each item in fields
@@ -153,9 +154,11 @@ html(lang="en")
             .footer__data
               nav.menu.menu--color-white.footer__data-menu
                 ul.menu__list
-                  each item in menu 
-                    li.menu__item
-                      a(href="#").menu__link #{item}
+                  - var menu = [{link: '#skill', title: 'Главная' }, {link: '#about', title:'Обо мне'} , {link: '#skills', title:'Навыки' }, {link: '#works', title:'Работы' }, {link: '#reviews', title:'Отзывы'} , {link: '#contacts', title:'Связаться'}];
+                      each item in menu
+                        - const {link, title} = item
+                        li.menu__item
+                          a(href= link).menu__link #{title}
               .footer__data-content
                 .footer__data-col
                   .footer__data-text

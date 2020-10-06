@@ -1,34 +1,34 @@
 [
     {
       "id": 1,
-      "title": "Сайт школы онлайн образования",
-      "skills": " Html, Css, JavaScript",
-      "photo": "work_1.jpg",
-      "link": "//google.com",
-      "desc": "1 Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!"
+      "title": " Сайт компании Афродита",
+      "skills": " Html, Css",
+      "photo": "work_1.png",
+      "link": "//affectionate-ramanujan-07e18f.netlify.app",
+      "desc": "Этот мой первый проект и я сделал его самостоятельно!"
     },
     {
       "id": 2,
-      "title": "Первый проект",
-      "skills": "Html, Css, JavaScript",
-      "photo": "work_2.jpg",
-      "link": "//yandex.ru",
-      "desc": "2 Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!"
+      "title": " Сайт компании Mr.Burgers",
+      "skills": " Html, Css, JavaScript, jQuery",
+      "photo": "work_2.png",
+      "link": "//loftschool-novikov.github.io/burgers/dist/index.html",
+      "desc": " Это второй мой проект.Он уже сложнее предидущего, здесь применялись технологии One Page Scroll и Slick slider!"
     },
     {
       "id": 3,
-      "title": "Второй проект",
-      "skills": "Html, Css, JavaScript",
-      "photo": "work_3.jpg",
-      "link": "//rambler.ru",
-      "desc": "3 Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!"
+      "title": "Третий проект",
+      "skills": "Html, Css, JavaScript, Vue.Js",
+      "photo": "work_3.png",
+      "link": "//loftschool-novikov.github.io/autumn/dist/index.html#about",
+      "desc": "Это мой третий проект и он действительно был сложный, но я справился! В жатые сроки я смог разобраться со Vue.Js и выполнить данный проект!!!"
     },
     {
         "id": 4,
-        "title": "Третий проект",
+        "title": "Четвертый проект",
         "skills": "Html, Css, JavaScript",
         "photo": "work_4.jpg",
         "link": "//rambler.ru",
-        "desc": "4 Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!"
+        "desc": "На данный момент это заглушка, в дальнейшем здесь обязательно появиться новый проект"
       }
   ]
