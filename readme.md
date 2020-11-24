@@ -29,4 +29,4 @@ $ npm run имя_скрипта
 ```sh
 $ yarn имя_скрипта
 ```
-##  Сылка на проект https://loftschool-novikov.github.io/autumn/dist/index.html
+##  Сылка на проект https://novik93.github.io/autumn/dist/index.html
