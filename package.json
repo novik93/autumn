@@ -51,7 +51,7 @@
     "last 2 versions"
   ],
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "hooper": "^0.3.4",
     "normalize.css": "^8.0.1",
     "postcss-each": "^0.10.0",
