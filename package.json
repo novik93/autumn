@@ -58,7 +58,7 @@
     "postcss-sass-each": "^0.1.0",
     "postcss-ts-classnames": "^0.1.2",
     "promptly": "^3.0.3",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "request": "^2.88.0",
     "signale": "^1.4.0",
     "simple-vue-validator": "^0.16.0",
